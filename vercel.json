@@ -1,5 +1,5 @@
 {
-    "buids":[
+    "build":[
         {
             "src":"medical/wsgi.py",
             "use":"@vercel/python",
