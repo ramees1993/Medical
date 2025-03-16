@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}
+Gastroenterology
+{% endblock title %}
+{% block content %}
+<body>
+    <header>
+        <h1 align="center">Gastroenterology Department</h1>
+    </header>
+    
+    <div class="container">
+        <section>
+            
+            <p>The Gastroenterology Department specializes in diagnosing and treating disorders of the digestive system, including the stomach, intestines, liver, and pancreas.</p>
+        </section>
+        
+        <section>
+            <h2>Our Services</h2>
+            <ul>
+                <li>Endoscopy and Colonoscopy</li>
+                <li>Treatment of Acid Reflux and GERD</li>
+                <li>Management of Liver Diseases</li>
+                <li>Pancreatic and Biliary Disorders</li>
+                <li>IBS and IBD Treatment</li>
+            </ul>
+        </section>
+        
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    {% comment %} <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p> {% endcomment %}
+                    <h1>Book Appointment with our Experts</h1>
+                </div>
+                <div class="row g-4">
+                    {% for doc in doctor %}
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item position-relative rounded overflow-hidden">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="{{doc.doc_pic.url}}" alt="">
+                            </div>
+                            <div class="team-text bg-light text-center p-4">
+                                <h5>{{doc.doc_name}}</h5>
+                                <p class="text-primary">{{doc.doc_dep}}</p>
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square" href="{{doc.doc_face_book}}"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square" href="{{doc.doc_twitter}}"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square" href="{{doc.doc_insta}}"><i class="fab fa-instagram"></i></a>
+                                    <a href="/appointment" class="nav-item nav-link active">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    
+      
+    </div>
+    <div class="footer"> </div>
+</body>
+</html>
+
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-map-marker-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Address</p>
+                            <h5 class="mb-0">Hamdan, Abu Dhabi, UAE </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Call Us Now</p>
+                            <h5 class="mb-0">+971509346755</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="h-100 bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-envelope-open text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Mail Us Now</p>
+                            <h5 class="mb-0">armedicalcenter@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="bg-light rounded p-5">
+                        <p class="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
+                        <h1 class="mb-4">Have Any Query? Please Contact Us!</h1>
+                        <p class="mb-4">If You Have Any Query Please Contact Us.... <a href="/appointment">Book The Doctor</a>.</p>
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        {{ form.name }}   
+                                        <label for="Your Name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        {{ form.email }}
+                                        <label for="Your Email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        {{ form.phone }}
+                                        <label for="Your Phone Number">Phone</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        {{ form.message }}
+                                        <label for="Leave Your Message">Message</label>
+                                    </div>
+                                </div>
+                                {% comment %} <div class="col-12">
+                                    <div class="form-floating">
+                                        {{ form.message }}
+                                        <label for="Leave Your Message">Message</label>
+                                    </div>
+                                </div> {% endcomment %}
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                       
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100" style="min-height: 400px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7852.6821318110915!2d76.193331!3d10.234052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0819ec9023725b%3A0x444c40e245149091!2sAR%20Super%20Speciality%20Hospital!5e0!3m2!1sen!2sin!4v1741527632263!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+{% endblock content %}
+
+    

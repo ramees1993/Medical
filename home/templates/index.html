@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src="{% static 'img/about-1.jpg' %}" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="{% static 'img/about-2.jpg' %}" alt="" style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">About Us</p>
+                    <h1 class="mb-4">Why You Should Trust Us? Get Know About Us!</h1>
+                    <p>We Are Serving High Quality Services. We Have High Qualified Staff.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Quality health care</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Only Qualified Doctors</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Medical Research Professionals</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="/service">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Services</p>
+                <h1>Health Care Solutions</h1>
+            </div>
+            <div class="row g-4">
+                {% for dep in department %}
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item bg-light rounded h-100 p-5">
+                        <div class="d-inline-flex align-items-center justify-content-center bg-white rounded-circle mb-4" style="width: 65px; height: 65px;">
+                            <i class="fa fa-heartbeat text-primary fs-4"></i>
+                        </div>
+                        <h4 class="mb-3">{{dep.dep_name}}</h4>
+                        <p class="mb-4">{{dep.dep_des}}</p>
+                        <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+               
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <p class="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
+                        <h1 class="text-white mb-4">Why Choose Us</h1>
+                        <p class="text-white mb-4 pb-2">We Are Serving High Quality Services. We Have High Qualified Staff.</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-user-md text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Experience</p>
+                                        <h5 class="text-white mb-0">Doctors</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Quality</p>
+                                        <h5 class="text-white mb-0">Services</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-comment-medical text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Positive</p>
+                                        <h5 class="text-white mb-0">Consultation</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-headphones text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">24 Hours</p>
+                                        <h5 class="text-white mb-0">Support</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/feature.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p>
+                <h1>Our Experience Doctors</h1>
+            </div>
+            <div class="row g-4">
+                {% for doc in doctor %}
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="{{doc.doc_pic.url}}" alt="Doctor Image">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>{{doc.doc_name}}</h5>
+                            <p class="text-primary">{{doc.doc_dep}}</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href="{{doc.doc_face_book}}"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href="{{doc.doc_twitter}}"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href="{{doc.doc_insta}}"><i class="fab fa-instagram"></i></a>
+                                  <a href="/appointment" class="nav-item nav-link active">Book Appointment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Appointment Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+                    <h1 class="mb-4">Make An Appointment To Visit Our Doctor</h1>
+                    <p class="mb-4">If You Have Any Query Please Connect US.</p>
+                    
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Call Us Now</p>
+                            <h5 class="mb-0">+971509346755</h5>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-envelope-open text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Mail Us Now</p>
+                            <h5 class="mb-0">ar@medicalcenter@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+                        <form method="post">
+                            {% csrf_token %}
+                            <h1 align= "center"> Book Your Appointment </h1>
+                            
+                            <p class="mb-4">If You Need to Book the Doctor... Please fill the form..</p>
+                            <div class="alert alert-success d-none" role="alert"></div>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                   {{form.name}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {{form.email}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {{form.phone}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {{form.doctor}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        {{form.booked}}
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        {{form.time}}
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    {{form.desc}}
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+
+    
+    {% endblock  %}
+
+   

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Appointment{% endblock %}
+{% block content %}
+
+    <!-- Appointment Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+                    <h1 class="mb-4">Make An Appointment To Visit Our Doctor</h1>
+                    <p class="mb-4">If You Have Any Query Please Connect US.</p>
+                    <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-phone-alt text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Call Us Now</p>
+                            <h5 class="mb-0">+971509346755</h5>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded d-flex align-items-center p-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                            <i class="fa fa-envelope-open text-primary"></i>
+                        </div>
+                        <div class="ms-4">
+                            <p class="mb-2">Mail Us Now</p>
+                            <h5 class="mb-0">armedicalcenter@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-light rounded h-100 d-flex align-items-center p-5">
+                        <form method="post">
+                            {% csrf_token %}
+                            <h1 align= "center"> Book Your Appointment </h1>
+                            
+                            <p class="mb-4">If You Need to Book the Doctor... Please fill the form..</p>
+                            <div class="alert alert-success d-none" role="alert"></div>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                   {{form.name}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {{form.email}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {{form.phone}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {{form.doctor}}
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        {{form.booked}}
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        {{form.time}}
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    {{form.desc}}
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+       {% endblock content %} 
+
+    

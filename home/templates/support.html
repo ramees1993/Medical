@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Support
+{% endblock title %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <h1>Contact Support</h1>
+         
+        <form method="POST">
+            {% csrf_token %}
+            
+            <!-- Dynamically render Django form fields -->
+            {{ form.as_p }}
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock content %}

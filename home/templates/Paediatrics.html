@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}
+Paediatrics
+{% endblock title %}
+{% block content %}
+<body>
+    <div class="container">
+        <h1>Pediatrics Department</h1>
+        <p>Our Pediatrics Department is dedicated to the health and well-being of children. We offer specialized care for infants, children, and adolescents.</p>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    {% comment %} <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p> {% endcomment %}
+                    <h1>Book Appointment with our Experts</h1>
+                </div>
+                <div class="row g-4">
+                    {% for doc in doctor %}
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item position-relative rounded overflow-hidden">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="{{doc.doc_pic.url}}" alt="">
+                            </div>
+                            <div class="team-text bg-light text-center p-4">
+                                <h5>{{doc.doc_name}}</h5>
+                                <p class="text-primary">{{doc.doc_dep}}</p>
+                                <div class="team-social text-center">
+                                    <a class="btn btn-square" href="{{doc.doc_face_book}}"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square" href="{{doc.doc_twitter}}"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square" href="{{doc.doc_insta}}"><i class="fab fa-instagram"></i></a>
+                                    <a href="/appointment" class="nav-item nav-link active">Book Appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    
+      
+    </div>
+    <div class="footer"> </div>
+</body>
+</html>
+
+
+
+
+
+
+{% endblock content %}
