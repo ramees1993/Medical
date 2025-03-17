@@ -31,7 +31,7 @@ SECRET_KEY = 'nbe2)^kqj!*2j8zla5(i+)7&5sw0-@(-b-8n5c##rdfe76@l(i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','.vercel.app','medical-asff.onrender.com']
 
 
 
